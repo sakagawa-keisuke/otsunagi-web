@@ -2,11 +2,14 @@
 // “Hello, World!” Example: https://learn-code.wix.com/en/article/hello-world
 
 import { applyModernStyles, applyResponsiveTypography, enableDarkMode, addKineticAnimation } from 'public/modern-styles-2025.js';
+import { applySiteConfig } from 'public/site-config-controls.js';
 
 $w.onReady(function () {
     // Apply 2025 modern design system
     applyModernStyles();
     applyResponsiveTypography();
+    // Apply content-driven UI toggles (banner, hero variants, etc.)
+    applySiteConfig();
     
     // Enhanced Navigation and User Experience
     initializeNavigation();
@@ -198,6 +201,15 @@ function hideMobileMenu() {
     if (menuContainer && menuContainer.isVisible) {
         menuContainer.hide('slide', { direction: 'top' });
     }
+}
+
+// Safe no-op stubs to avoid runtime errors if not yet implemented
+function initializeModernUI() {
+    // Placeholder for additional modern UI setup
+}
+
+function setupKineticAnimations() {
+    // Placeholder for kinetic animations wiring
 }
 
 function initializeModernUI() {
